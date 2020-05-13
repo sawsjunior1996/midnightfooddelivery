@@ -29,7 +29,7 @@ app.get("/", (request, response) => {
 
 app.listen(process.env.PORT || 3000, () => { console.log("App is listening on port 3000"); });
 
-//////  text testing
+//  text json api return from chatfuel
 app.get('/text', (req,res)=>{
   console.log("got success text", req.query.id)
   res.status(200).json({
@@ -42,7 +42,7 @@ app.get('/text', (req,res)=>{
   });
 })
 
-// testing
+// location 
 app.get('/location', (req,res)=>{
   console.log("got loca", req.query.loc)
   var loc = req.query.loc.split('/')[5]
